@@ -217,13 +217,14 @@ p {
 .theme-switch-wrapper span {
   margin-right: 10px;
   font-size: 1rem;
+  filter: brightness(105%);
 }
 
 .toggle-text {
   position: relative;
   top: -4px;
   right: 5px;
-  color: var(--on-background);
+  color: var(--primary-color);
 }
 
 .theme-switch {
@@ -329,13 +330,14 @@ input:checked + .slider::before {
   .theme-switch-wrapper span {
     margin-right: 5px;
     font-size: 0.8rem;
+    filter: brightness(105%);
   }
 
   .toggle-text {
     position: relative;
     top: -4px;
     right: 5px;
-    color: var(--on-background);
+    color: var(--primary-color);
   }
   p {
     margin: 0;
