@@ -73,7 +73,7 @@ nav {
   font-size: 28px;
   letter-spacing: 3px;
   padding: 25px;
-  padding-right: 0%;
+  /* padding-right: 0%; */
   width: 65vw;
   background: rgb(255 255 255 / 50%);
 }
@@ -172,7 +172,7 @@ button:hover:not(.outline) {
 
 .text-box {
   width: 60%;
-  text-align: justify;
+  /* text-align: justify; */
   background: var(--primary-color);
   color: var(--on-primary);
   border-radius: 10px;
@@ -189,7 +189,7 @@ button:hover:not(.outline) {
 p {
   margin: 0;
   line-height: px;
-  font-size: 12px;
+  font-size: .8rem;
 }
 
 /* Contact Section */
@@ -283,26 +283,28 @@ input:checked + .slider::before {
 
 @media (min-width: 120px) and (max-width: 680px) {
   .text-box {
-    width: 70%;
-    text-align: justify;
+    width: 82%;
+    /* text-align: justify; */
     background: var(--primary-color);
     color: var(--on-primary);
     border-radius: 10px;
-    padding: 30px;
+    padding: 5%;
     font-size: 15px;
     font-family: "Noto Sans KR", "cursive", serif;
     letter-spacing: 2px;
   }
   nav {
+    display: flex;
+    align-items: center;
     z-index: 10;
     position: fixed;
     font-family: "Gamja Flower", "cursive", serif;
-    font-size: 4vw;
+    font-size: 3.5vw;
     letter-spacing: 0px;
     margin-top: 12px;
     padding: 25px;
-    padding-right: 0%;
-    width: 40vw;
+    /* padding-right: 0%; */
+    width: 90vw;
     background: rgb(255 255 255 / 50%);
   }
   h1 {
@@ -335,12 +337,13 @@ input:checked + .slider::before {
 
   .toggle-text {
     position: relative;
-    top: -4px;
+    /* top: -14px; */
     right: 5px;
     color: var(--primary-color);
   }
   p {
     margin: 0;
     line-height: 25px;
+    word-break: keep-all;
   }
 }
