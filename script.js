@@ -36,6 +36,7 @@ function toggleDarkLightMode(mode) {
     : toggleIcon.children[0].classList.replace("fa-moon", "fa-sun");
 }
 function increaseSize() {
+    if (parseFloat(getComputedStyle(lWord).fontSize) > 25) return null;
     pTag.forEach(element => {
         let fontSize = parseFloat(element.style.fontSize);
         if (fontSize) {
@@ -62,6 +63,8 @@ function increaseSize() {
     // lWord.style.fontSize = `${parseFloat(lWord.style.fontSize) + 0.1}vw !important`
 }
 function decreaseSize() {
+    if (parseFloat(getComputedStyle(lWord).fontSize) < 3) return null;
+
     pTag.forEach(element => {
         let fontSize = parseFloat(element.style.fontSize);
         if (fontSize) {
