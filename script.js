@@ -57,7 +57,9 @@ function increaseSize() {
             element.setAttribute("style", `font-size: ${parseFloat(getComputedStyle(element).fontSize) + 2}px`);
         }
     })
-    lWord.style.fontSize = `${parseFloat(lWord.style.fontSize) + 0.1}vw`
+    lWord.setAttribute("style", `font-size: ${parseFloat(getComputedStyle(lWord).fontSize) + 2}px; opacity: .6; text-align: center; line-height: 150%; word-break: keep-all`);
+
+    // lWord.style.fontSize = `${parseFloat(lWord.style.fontSize) + 0.1}vw !important`
 }
 function decreaseSize() {
     pTag.forEach(element => {
@@ -81,7 +83,8 @@ function decreaseSize() {
             element.setAttribute("style", `font-size: ${parseFloat(getComputedStyle(element).fontSize) - 2}px`);
         }
     })
-    lWord.style.fontSize = `${parseFloat(lWord.style.fontSize) - 0.1}vw`
+    lWord.setAttribute("style", `font-size: ${parseFloat(getComputedStyle(lWord).fontSize) - 2}px; opacity: .6; text-align: center; line-height: 150%; word-break: keep-all`);
+    // lWord.style.fontSize = `${parseFloat(lWord.style.fontSize) - 0.1}vw !important`
 
 }
 

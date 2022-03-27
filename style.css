@@ -16,7 +16,7 @@
 }
 
 [data-theme="dark"] {
-  --primary-color: #18237c;
+  --primary-color: #523f90;
   /* --primary-variant: #6c63ff; */
   /* --secondary-color: #03dac5; */
   --on-primary: #d8d7f7;
@@ -282,7 +282,9 @@ input:checked + .slider::before {
   font-size: 30px;
   margin-right: 5px;
 }
-
+/* #lastWord {
+  font-size: .9vw !important;
+} */
 @media (min-width: 120px) and (max-width: 680px) {
   .text-box {
     width: 82%;
@@ -371,3 +373,51 @@ input:checked + .slider::before {
     word-break: keep-all;
   }
 }
+
+/* 화살표 */
+.arrow,
+.arrow:before {
+  position: absolute;
+  left: 50%;
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  top: 90%;
+  margin: -20px 0 0 -20px;
+  -webkit-transform: rotate(45deg);
+  border-left: none;
+  border-top: none;
+  border-right: 2px var(--on-background-alt) solid;
+  border-bottom: 2px var(--on-background-alt) solid;
+}
+
+.arrow:before {
+  content: "";
+  width: 20px;
+  height: 20px;
+  top: 80%;
+  margin: -22px 0 0 -10px;
+  border-left: none;
+  border-top: none;
+  border-right: 2px var(--on-background-alt) solid;
+  border-bottom: 2px var(--on-background-alt) solid;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-name: arrow;
+}
+
+@keyframes arrow {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translate(-10px, -10px);
+  }
+}
+  
+  
+  
+  
