@@ -5,23 +5,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
 :root {
-  --primary-color: #ECC263;
-  --primary-variant: #ECC263;
-  --secondary-color: #1b9999;
+  --primary-color: #d8d7f7  ;
+  /* --primary-variant: #d8d7f7; */
+  /* --secondary-color: #1b9999; */
   --on-primary: rgb(0, 0, 0);
-  --on-background: #FFDB6A;
-  --on-background-alt: #B2994A;
-  --background: #F7F3E8;
+  --on-background: #d8d7f7;
+  --on-background-alt: #80aced;
+  --background: #efeffa;
   --box-shadow: 0 5px 20px 1px rgba(7, 6, 6, 0.5);
 }
 
 [data-theme="dark"] {
-  --primary-color: #65735E;
-  --primary-variant: #6c63ff;
-  --secondary-color: #03dac5;
-  --on-primary: rgb(223, 223, 223);
-  --on-background: #93A689;
-  --on-background-alt: rgba(255, 255, 255, 0.7);
+  --primary-color: #18237c;
+  /* --primary-variant: #6c63ff; */
+  /* --secondary-color: #03dac5; */
+  --on-primary: #d8d7f7;
+  --on-background: #d8d7f7;
+  --on-background-alt: #d8d7f7;
   --background: #21261F;
 }
 
@@ -49,6 +49,7 @@ h1 {
   font-family: "Stylish", "cursive", serif;
   font-size: 100px;
   margin-bottom: 0;
+  color: var(--on-background-alt);
 }
 
 h2 {
@@ -67,20 +68,22 @@ h3 {
 
 /* Navigation */
 nav {
+  display: flex;
+  align-items: center;
   z-index: 10;
   position: fixed;
   font-family: "Gamja Flower", "cursive", serif;
   font-size: 28px;
   letter-spacing: 3px;
-  padding: 25px;
-  /* padding-right: 0%; */
-  width: 65vw;
+  padding: 15px;
+  justify-content: space-between;
+  width: 96vw;
   background: rgb(255 255 255 / 50%);
 }
 
 a {
   margin-right: 25px;
-  color: var(--primary-color);
+  color: var(--on-background-alt);
   text-decoration: none;
   border-bottom: 3px solid transparent;
   font-weight: bold;
@@ -125,12 +128,14 @@ img {
 }
 
 button {
-  min-width: 100px;
-  height: 40px;
+  /* min-width: 100px; */
+  background-color: white;
+  width: 4vw;
+  height: 4vw;
   cursor: pointer;
-  border-radius: 10px;
-  margin-right: 10px;
-  border: 2px solid var(--primary-color);
+  border-radius: 5px;
+  /* margin-right: 10px; */
+  border: 1px solid var(--primary-color);
   font-size: 15px;
   outline: none;
 }
@@ -209,21 +214,18 @@ p {
   display: flex;
   align-items: center;
   /* z-index: 100; */
-  position: fixed;
-  right: 35px;
-  top: 30px;
+  /* position: fixed; */
+  /* right: 35px; */
+  /* top: 30px; */
 }
 
 .theme-switch-wrapper span {
-  margin-right: 10px;
+  /* margin-right: 10px; */
   font-size: 1rem;
   filter: brightness(105%);
 }
 
 .toggle-text {
-  position: relative;
-  top: -4px;
-  right: 5px;
   color: var(--primary-color);
 }
 
@@ -301,20 +303,44 @@ input:checked + .slider::before {
     font-family: "Gamja Flower", "cursive", serif;
     font-size: 3.5vw;
     letter-spacing: 0px;
-    margin-top: 12px;
-    padding: 25px;
-    /* padding-right: 0%; */
+    /* margin-top: 12px; */
+    padding: 5vw;
+    justify-content: space-between;
     width: 90vw;
     background: rgb(255 255 255 / 50%);
   }
+  button {
+    /* min-width: 100px; */
+    background-color: white;
+    width: 8vw;
+    height: 8vw;
+    cursor: pointer;
+    border-radius: 5px;
+    /* margin-right: 10px; */
+    border: 1px solid var(--primary-color);
+    font-size: 15px;
+    outline: none;
+  }
   h1 {
     font-family: "Stylish", "cursive", serif;
-    font-size: 45px;
+    font-size: 2.5rem;
     margin-bottom: 0;
+  }
+  h2 {
+    font-family: "Stylish", "cursive", serif;
+    font-size: 1.7rem;
+    margin: 0.8rem;
+
+  }
+  h3 {
+    font-family: "Stylish", "cursive", serif;
+    font-size: 1.3rem;
+    font-weight: normal;
+    margin: 20px;
   }
   a {
     margin-right: 5px;
-    color: var(--primary-color);
+    color: var(--on-background-alt);
     text-decoration: none;
     border-bottom: 3px solid transparent;
     font-weight: bold;
@@ -324,21 +350,19 @@ input:checked + .slider::before {
     display: flex;
     align-items: center;
     /* z-index: 100; */
-    position: fixed;
-    right: 15px;
-    top: 30px;
+    /* position: fixed; */
+    /* right: 15px; */
+    /* top: 30px; */
   }
 
   .theme-switch-wrapper span {
-    margin-right: 5px;
+    /* margin-right: 5px; */
     font-size: 0.8rem;
     filter: brightness(105%);
   }
 
   .toggle-text {
-    position: relative;
     /* top: -14px; */
-    right: 5px;
     color: var(--primary-color);
   }
   p {
