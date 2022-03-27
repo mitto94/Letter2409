@@ -359,8 +359,10 @@ input:checked + .slider::before {
 
   .theme-switch-wrapper span {
     /* margin-right: 5px; */
-    font-size: 0.8rem;
+    font-size: 0.9rem;
     filter: brightness(105%);
+    color: var(--on-background-alt);
+
   }
 
   .toggle-text {
