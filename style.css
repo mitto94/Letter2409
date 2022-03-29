@@ -132,23 +132,18 @@ button {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: white;
+  background-color: var(--background);
   width: 4vw;
   height: 4vw;
   cursor: pointer;
   border-radius: 5px;
-  border: 1px solid var(--primary-color);
-  font-size: 15px;
+  border: 1px solid var(--on-background-alt);
+  font-size: 20px;
   outline: none;
 }
 
-button:disabled {
-  opacity: 0.4;
-  cursor: default;
-}
-
 button:hover:not(.outline) {
-  filter: brightness(110%);
+  filter: brightness(90%);
 }
 
 .primary {
@@ -317,12 +312,12 @@ input:checked + .slider::before {
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: white;
+    background-color: var(--background);
     width: 8vw;
     height: 8vw;
     cursor: pointer;
     border-radius: 5px;
-    border: 1px solid var(--primary-color);
+    border: .5px solid var(--on-background-alt);
     font-size: 15px;
     outline: none;
   }

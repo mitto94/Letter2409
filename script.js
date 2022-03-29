@@ -28,7 +28,7 @@ function toggleDarkLightMode(mode) {
         element.style.backgroundColor = mode === "dark" ? `#2b214d` : `#d8d7f7`;
     });
     button.forEach(element => {
-        element.style.backgroundColor = mode === "dark" ? `#2b214d` : `white`;
+        element.style.backgroundColor = mode === "dark" ? `#2b214d` : `#efeffa`;
         element.style.color = mode === "dark" ? `white` : `black`;
     })
     toggleText.textContent = mode === "dark"  ? 'Dark Mode' : 'Light Mode';
@@ -90,6 +90,32 @@ function decreaseSize() {
     // lWord.style.fontSize = `${parseFloat(lWord.style.fontSize) - 0.1}vw !important`
 
 }
+
+// function capture() {
+//     html2canvas(document.body, {
+// 		useCORS: true,
+// 		onrendered: function(canvas) {
+// 			var img =canvas.toDataURL("image/jpeg,1.0");
+// 			var pdf = new jsPDF({
+//                 orientation: "portrait",
+//                 format: [20000,5000]
+//             });
+// 			//var width = pdf.internal.pageSize.getWidth();
+// 			//var height = pdf.internal.pageSize.getHeight();
+           
+//            /*
+//             var pdf=new jsPDF("p", "mm", "a4");
+//             var width = pdf.internal.pageSize.getWidth();    
+//             var height = pdf.internal.pageSize.getHeight();
+//             pdf.addImage(canvas, 'JPEG', 0, 0,width,height);
+//             pdf.save('test11.pdf');
+//            */   
+//             console.log("image", img)
+// 			pdf.addImage(img, 'JPEG', 0, 0); 
+// 			pdf.save('filename.pdf');
+// 		}
+// 	});
+// }
 
 //Switch Theme Dynamically
 function switchTheme(event) {
