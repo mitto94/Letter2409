@@ -4,26 +4,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Gamja+Flower&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
 
+
 :root {
-  --primary-color: #d8d7f7  ;
-  /* --primary-variant: #d8d7f7; */
-  /* --secondary-color: #1b9999; */
+  /* 텍스트 박스 배경 */
+  --primary-color: #F9EBC8  ;
   --on-primary: rgb(0, 0, 0);
-  --on-background: #d8d7f7;
-  --on-background-alt: #80aced;
-  --background: #efeffa;
+  --on-background: #F9EBC8;
+  /* 타이틀 폰트 색 */
+  --on-background-alt: #0e7086;
+  /* 제일 밝은 바깥 배경 */
+  --background: #FEFBE7;
   --box-shadow: 0 5px 20px 1px rgba(7, 6, 6, 0.5);
 }
 
 [data-theme="dark"] {
-  --primary-color: #523f90;
-  /* --primary-variant: #6c63ff; */
-  /* --secondary-color: #03dac5; */
-  --on-primary: #d8d7f7;
-  --on-background: #d8d7f7;
-  --on-background-alt: #d8d7f7;
-  --background: #21261F;
+  /* 텍스트 박스 배경 */
+  --primary-color: #012424;
+  /* 글씨 색깔 밝은걸로 */
+  --on-primary: #F2F2F2;
+  --on-background: #F2F2F2;
+  --on-background-alt: #F2F2F2;
+  /* 전체 배경 색 */
+  --background: #383838;
 }
+
 
 html {
   box-sizing: border-box;

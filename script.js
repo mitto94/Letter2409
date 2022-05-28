@@ -13,22 +13,15 @@ const h3Tag = document.querySelectorAll("h3");
 const lWord = document.getElementById("lastWord");
 const button = document.querySelectorAll("button");
 
-// Dark or Light Images
-// function imageMode(color) {
-//     image1.src = `img/undraw_proud_coder_${color}.svg`;
-//     image2.src = `img/undraw_feeling_proud_${color}.svg`;
-//     image3.src = `img/undraw_conceptual_idea_${color}.svg`;
-// }
-
 // Dark Light Mode styles
 
 function toggleDarkLightMode(mode) {
     nav.style.backgroundColor = mode === "dark" ? `rgb(0 0 0 / 50%)` : `rgb(255 255 255 / 50%)`;
     textBox.forEach(element => {
-        element.style.backgroundColor = mode === "dark" ? `#2b214d` : `#d8d7f7`;
+        element.style.backgroundColor = mode === "dark" ? `#012424` : `#F9EBC8`;
     });
     button.forEach(element => {
-        element.style.backgroundColor = mode === "dark" ? `#2b214d` : `#efeffa`;
+        element.style.backgroundColor = mode === "dark" ? `#012424` : `#F9EBC8`;
         element.style.color = mode === "dark" ? `white` : `black`;
     })
     toggleText.textContent = mode === "dark"  ? 'Dark Mode' : 'Light Mode';
@@ -91,31 +84,6 @@ function decreaseSize() {
 
 }
 
-// function capture() {
-//     html2canvas(document.body, {
-// 		useCORS: true,
-// 		onrendered: function(canvas) {
-// 			var img =canvas.toDataURL("image/jpeg,1.0");
-// 			var pdf = new jsPDF({
-//                 orientation: "portrait",
-//                 format: [20000,5000]
-//             });
-// 			//var width = pdf.internal.pageSize.getWidth();
-// 			//var height = pdf.internal.pageSize.getHeight();
-           
-//            /*
-//             var pdf=new jsPDF("p", "mm", "a4");
-//             var width = pdf.internal.pageSize.getWidth();    
-//             var height = pdf.internal.pageSize.getHeight();
-//             pdf.addImage(canvas, 'JPEG', 0, 0,width,height);
-//             pdf.save('test11.pdf');
-//            */   
-//             console.log("image", img)
-// 			pdf.addImage(img, 'JPEG', 0, 0); 
-// 			pdf.save('filename.pdf');
-// 		}
-// 	});
-// }
 
 //Switch Theme Dynamically
 function switchTheme(event) {
@@ -129,10 +97,27 @@ function switchTheme(event) {
         toggleDarkLightMode("light");
     }
 }
+//Switch Theme Dynamically
+function switchMode() {
+    let date = new Date().getHours()
+    if (date >= 18) {
+        toggleSwitch.checked = true;
+        document.documentElement.setAttribute("data-theme", "dark");
+        localStorage.setItem("theme", "dark");
+        toggleDarkLightMode("dark");
+    } else {
+        toggleSwitch.checked = false;
+        document.documentElement.setAttribute("data-theme", "light");
+        localStorage.setItem("theme", "light");
+        toggleDarkLightMode("light");
+    }
+}
 
 // Event Listener
 toggleSwitch.addEventListener("change", switchTheme);
-
+setTimeout(function() {
+    switchMode()
+  }, 1);
 // Check Local Storage for Theme
 // const currentTheme = localStorage.getItem("theme");
 // console.log(currentTheme)
