@@ -100,7 +100,7 @@ function switchTheme(event) {
 //Switch Theme Dynamically
 function switchMode() {
     let date = new Date().getHours()
-    if (date >= 18) {
+    if (date >= 18 || date <= 6) {
         toggleSwitch.checked = true;
         document.documentElement.setAttribute("data-theme", "dark");
         localStorage.setItem("theme", "dark");
