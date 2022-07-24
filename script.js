@@ -106,13 +106,19 @@ function switchMode() {
         document.documentElement.setAttribute("data-theme", "dark");
         localStorage.setItem("theme", "dark");
         toggleDarkLightMode("dark");
+        console.log("mode1", mode.href);
         mode.href = "./은총다크.png"
+        console.log("mode", mode.href);
+
     } else {
         toggleSwitch.checked = false;
         document.documentElement.setAttribute("data-theme", "light");
         localStorage.setItem("theme", "light");
         toggleDarkLightMode("light");
+        console.log("mode1", mode.href);
+
         mode.href = "./은총라이트.png"
+        console.log("mode", mode.href);
 
     }
 }
