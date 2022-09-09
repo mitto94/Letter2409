@@ -18,10 +18,10 @@ const button = document.querySelectorAll("button");
 function toggleDarkLightMode(mode) {
     nav.style.backgroundColor = mode === "dark" ? `rgb(0 0 0 / 50%)` : `rgb(255 255 255 / 50%)`;
     textBox.forEach(element => {
-        element.style.backgroundColor = mode === "dark" ? `#0a3b44` : `#D5E7F1`;
+        element.style.backgroundColor = mode === "dark" ? `#4b2f13` : `#F7EBDE`;
     });
     button.forEach(element => {
-        element.style.backgroundColor = mode === "dark" ? `#0a3b44` : `#D5E7F1`;
+        element.style.backgroundColor = mode === "dark" ? `#4b2f13` : `#F7EBDE`;
         element.style.color = mode === "dark" ? `white` : `black`;
     })
     toggleText.textContent = mode === "dark"  ? 'Dark Mode' : 'Light Mode';
